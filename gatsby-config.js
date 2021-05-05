@@ -1,11 +1,17 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `PETCLINIC`,
+    description: `Pet Clinics Directory! Find the closest to your place, track your pet's medical history, get the best offers ever!.`,
+    author: `@GabrielRojas`,
   },
   plugins: [
+    "@chakra-ui/gatsby-plugin",
+    `gatsby-plugin-image`,
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-create-client-paths`,
+      options: { prefixes: [`/cuenta/*`] },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -18,13 +24,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `PetClinic`,
+        short_name: `petc`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#F6FEFC`,
+        theme_color: `#7C4DFF`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/logo-icon.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
